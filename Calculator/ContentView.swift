@@ -43,21 +43,23 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack {
-                        HStack{
-                            Spacer()
-                            Text(calculator.previousvalue.prefix(9))
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.system(size: 60))
-                                .padding()
-                        }
-                        HStack{
-                            Spacer()
-                            Text(calculator.value.prefix(9))
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.system(size: 60))
-                                .padding()
+                        if calculator.on_off == true{
+                            HStack{
+                                Spacer()
+                                Text(calculator.previousvalue.prefix(9))
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .font(.system(size: 60))
+                                    .padding()
+                            }
+                            HStack{
+                                Spacer()
+                                Text(calculator.value.prefix(9))
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .font(.system(size: 60))
+                                    .padding()
+                            }
                         }
                     }
                     .padding(.all, 0.0)

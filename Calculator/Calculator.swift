@@ -21,6 +21,7 @@ struct Calculator {
     var equal_is_pushed = false
     var decimal_is_used = false
     var D = 1
+    var on_off = true
     
     mutating func buttonpress(button: button){
         switch button.sign {
@@ -113,6 +114,15 @@ struct Calculator {
         default:
             D = 1
             
+        }
+    }
+    
+    mutating func on_off_func(){
+        if on_off == true {
+            on_off = false
+        }
+        else {
+            on_off = true
         }
     }
 }
