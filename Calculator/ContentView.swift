@@ -20,7 +20,7 @@ struct ContentView: View {
         [seven, eight, nine, times],
         [four, five, six, minus],
         [one, two, three, plus],
-        [zero, dot, equal]
+        [on, zero, dot, equal]
     ]
     
     var body: some View {
@@ -60,6 +60,11 @@ struct ContentView: View {
                                     .font(.system(size: 60))
                                     .padding()
                             }
+                        }
+                        else {
+                            Rectangle()
+                                .frame(width: 396, height: 215)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.261))
                         }
                     }
                     .padding(.all, 0.0)

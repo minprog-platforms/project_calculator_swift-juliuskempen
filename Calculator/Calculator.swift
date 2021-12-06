@@ -21,7 +21,7 @@ struct Calculator {
     var equal_is_pushed = false
     var decimal_is_used = false
     var D = 1
-    var on_off = true
+    var on_off = false
     
     mutating func buttonpress(button: button){
         switch button.sign {
@@ -110,6 +110,9 @@ struct Calculator {
             action = ""
             equal_is_pushed = false
             decimal_is_used = false
+        
+        case on.sign:
+            on_off_func()
             
         default:
             D = 1
@@ -147,6 +150,7 @@ let devide = button(name: "devide", sign: "÷")
 let percentage = button(name: "percentage", sign: "%")
 let plusminus = button(name: "plusminus", sign: "+/-")
 let clear = button(name: "clear", sign: "AC")
+let on = button(name: "on_off", sign: "ON")
 
 
 
